@@ -7,9 +7,8 @@ export class CreditCardDirective {
 
   @HostBinding('style.border') border = '';
 
-  @HostListener('input', ['$event']) onKeyDown(event: KeyboardEvent) {
-    const input = event.target as HTMLInputElement;
-
+  @HostListener('input', ['$event.target'])
+  onKeyDown(input: HTMLInputElement) {
     let trimmed = input.value.replace(/\s+/g, '');
     if (trimmed.length > 16) {
       trimmed = trimmed.substring(0, 16);
@@ -29,6 +28,6 @@ export class CreditCardDirective {
 
   }
 
-  constructor(private element: ElementRef) { }
+  constructor() { }
 
 }

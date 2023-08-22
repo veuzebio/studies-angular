@@ -3,14 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { DirectivesRoutingModule } from './directives-routing.module'
 import { ExamplesComponent } from './containers/examples.component';
-import { CreditCardDirective } from './custom-directives/credit-card.directive';
 
-
+import * as fromCustomDirectives from './custom-directives';
+import { TooltipComponent } from './components/tooltip/tooltip.component';
 
 @NgModule({
   declarations: [
     ExamplesComponent,
-    CreditCardDirective
+    ...fromCustomDirectives.directives,
+    TooltipComponent
   ],
   imports: [
     CommonModule,
