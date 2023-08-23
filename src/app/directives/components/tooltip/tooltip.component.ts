@@ -6,9 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./tooltip.component.scss']
 })
 export class TooltipComponent {
-  @Input() text: string = '';
-  left: number = 0;
-  top: number = 0;
-
-  constructor() {}
+  @Input() text = '';
+  left = 0;
+  top = 0;
 }

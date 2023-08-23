@@ -5,13 +5,13 @@ import { DirectivesRoutingModule } from './directives-routing.module'
 import { ExamplesComponent } from './containers/examples.component';
 
 import * as fromCustomDirectives from './custom-directives';
-import { TooltipComponent } from './components/tooltip/tooltip.component';
+import * as fromComponents from './components';
 
 @NgModule({
   declarations: [
     ExamplesComponent,
     ...fromCustomDirectives.directives,
-    TooltipComponent
+    ...fromComponents.components
   ],
   imports: [
     CommonModule,
