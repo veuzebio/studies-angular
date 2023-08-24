@@ -4,19 +4,41 @@
 
 <section class="card">
   <div class="card-body">
-    <label for="credit-card" class="form-label">Credit Card Number</label>
     <input
       id="credit-card"
       class="form-control"
       type="text"
-      placeholder="Enter your credit card number"
+      placeholder="Digite o número de seu cartão de crédito"
       creditCard
     />
+  </div>
+  <div class="card-body">
+    <ul>
+      <li>
+        Diretiva <code>CreditCardDirective</code>
+      </li>
+      <li>
+        Obtém o valor digitado e o formata com os devidos espaçamentos;
+      </li>
+      <li>
+        Realiza validação de caracteres não numéricos;
+      </li>
+    </ul>
   </div>
 </section>
 
 <section class="card mt-1">
   <div class="card-body">
-    <span tooltip="This is a tooltip">Hover for tooltip</span>
+    <p>Passe o mouse <strong tooltip="This is a tooltip">aqui</strong> para vizualizar a dica</p>
+  </div>
+  <div class="card-body">
+    <ul>
+      <li>
+        Diretiva <code>TooltipDirective</code>
+      </li>
+      <li>
+        Adiciona uma caixa de informações sobre o elemento aplicado
+      </li>
+    </ul>
   </div>
 </section>

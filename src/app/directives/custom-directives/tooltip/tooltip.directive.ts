@@ -56,7 +56,7 @@ export class TooltipDirective implements OnDestroy {
   }
 
   private destroy(): void {
-    this.tooltipComponent?.destroy();
     this.tooltipComponent = undefined;
+    this.container.clear();
   }
 }
