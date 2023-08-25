@@ -1,12 +1,16 @@
-import { Directive, ElementRef, HostBinding, HostListener, Renderer2 } from '@angular/core';
+import { Directive, HostBinding, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[creditCard]'
 })
 export class CreditCardDirective {
 
+  @HostBinding('class.is-invalid') isInvalid = false;
+
   @HostListener('input', ['$event.target'])
   onKeyDown(input: HTMLInputElement) {
+    console.log(this.isInvalid);
+
     let value = input.value.replace(/\s+/g, '');
 
     if (value.length > 16) {
@@ -21,14 +25,6 @@ export class CreditCardDirective {
 
     input.value = numbers.join(' ');
 
-    if (/[^\d]+/.test(value)) {
-      this.renderer.addClass(input, 'is-invalid');
-    } else {
-      this.renderer.removeClass(input, 'is-invalid');
-    }
-
+    this.isInvalid = (/[^\d]+/.test(value));
   }
-
-  constructor(private renderer: Renderer2) { }
-
 }

@@ -2,16 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { DirectivesRoutingModule } from './directives-routing.module'
-import { ExamplesComponent } from './containers/examples.component';
 
 import * as fromCustomDirectives from './custom-directives';
 import * as fromComponents from './components';
+import * as fromContainers from './containers';
 
 @NgModule({
   declarations: [
-    ExamplesComponent,
     ...fromCustomDirectives.directives,
-    ...fromComponents.components
+    ...fromComponents.components,
+    ...fromContainers.containers
   ],
   imports: [
     CommonModule,
