@@ -1,2 +1,18 @@
 <h3>Content Projection</h3>
-<auth-form></auth-form>
+<div class="container">
+  <div class="row">
+    <div class="col border-end">
+      <auth-form>
+        <h3>Create Account</h3>
+        <auth-remember></auth-remember>
+        <button type="button" class="btn btn-primary">Join us</button>
+      </auth-form>
+    </div>
+    <div class="col">
+      <ng-container #login>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+
